@@ -1,0 +1,175 @@
+/* 
+#241b22
+#a19d9e
+#9A7887
+#D07A86
+#758EAE
+#A396A5
+#DBA4A8
+#B4BDD0
+#e6e1e2 */
+
+
+* {
+  font-family: "Hack";
+  font-weight: bold;
+  min-height: 0;
+  /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+  font-size: 97%;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';  
+}
+
+/* color: #FE96D3; */
+window#waybar {
+  background-color: rgba(36, 27, 34, 0.5);
+  /* transition-property: rgba(23, 31, 36, 0.2); */
+  transition-duration: 0.5s;
+  /* border-radius: 4px; */
+  color: #fff;
+  border-radius: 4px;
+}
+
+window#waybar.hidden {
+  /* opacity: 0.1; */
+}
+
+window#waybar.empty {
+  /* background-color: transparent; */
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+window#waybar.empty #window {
+  
+  /*  background-color: rgba(66,66,66,0.5); */ /* transparent */
+  /* background-color: transparent; */
+}
+
+#mid-left {
+  margin-left: 200px;
+}
+#mid-right {
+  margin-right: 200px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+.modules-right {
+  margin-right: 8px;
+}
+#mid-right #battery,
+#mid-right #clock {
+  padding-left: 8px;
+}
+#workspaces button {
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 110%;
+  border-radius: 0;
+  color: #fff;
+}
+#workspaces button:hover {
+
+  
+
+  background-color: rgba(73, 63, 139, 0.6);
+  
+  
+  
+}
+#workspaces button.active {
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 0;
+  
+  
+  background-color: rgba(73, 63, 139, 0.6);
+}
+tooltip {
+  opacity: 0.8;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+tooltip label {
+  color: #cdd6f4;
+}
+
+#clock {
+  background-color: rgba(26, 46, 45, 0.6);
+  padding: 0px 8px 0px 8px; /* top right bottom left */
+  font-size: 100%;
+}
+
+/* 95 */
+#battery.good {
+  padding-right: 8px;
+  font-size: 100%;
+}
+/* 30 */
+#battery.warning {
+  background-color: rgba(255, 103, 0, 0.6);
+  padding-right: 8px;
+  font-size: 100%;
+}
+/* 15 */
+#battery.critical {
+  background-color: rgba(191, 97, 106, 0.6);
+  padding-right: 8px;
+  font-size: 100%;
+}
+#battery.charging {
+  background-color: rgba(186, 197, 119, 0.4);
+  padding-right: 8px;
+  font-size: 100%;
+}
+#battery.charging {
+  font-size: 110%;
+}
+@keyframes blink {
+  to {
+      color: #FAF9F6;
+      background-color: rgba(255, 103, 0, 1);
+  }
+}
+
+#battery.critical:not(.charging) {
+  background: rgba(191, 97, 106, 1);
+  color: #eceff4;
+  animation-name: blink;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.47, 0.03, 0.49, 1.55);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#backlight{
+  padding: 0px 8px 0px 8px; /* top right bottom left */
+}
+
+#pulseaudio {
+  padding: 0px 8px 0px 8px; /* top right bottom left */
+  background-color: rgba(169, 44, 63, 0.6);
+  
+}
+#motto {
+  font-size: 200%;
+}
+#window {
+  padding: 0px 8px 0px 8px; /* top right bottom left */
+  background-color: rgba(46, 66, 93, 0.6);
+}
+
+#workspaces,
+#window,
+#backlight,
+#pulseaudio,
+#motto,
+#clock,
+#battery,
+#mid-left,
+#mid-right{
+  padding: 0px 8px 0px 8px; /* top right bottom left */
+}

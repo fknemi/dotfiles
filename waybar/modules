@@ -1,0 +1,323 @@
+{
+    "hyprland/workspaces": {
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "show-special": false,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        },
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X"
+        }
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S ~ %d %h %a %Y}",
+        "format-alt": "{:%H:%M:%S}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "clockampm": {
+        "interval": 1,
+        "format": " {:%I:%M:%S %p}",
+        "format-alt": " {:%I:%M %p   %Y, %d %B, %A}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "memory": {
+        "interval": 10,
+        "format": "{used:0.1f}G / {total:0.1f}G",
+        // "format-alt": "{percentage}%",
+        // "format-alt-click": "click",
+        "tooltip": true,
+        "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
+        "on-click-right": "kitty --title btop sh -c 'btop'"
+    },
+    "battery": {
+        "align": 0,
+        "rotate": 0,
+        // "bat": "BAT0",
+        // "adapter": "ACAD",
+        "design-capacity": false,
+        "full-at": 100,
+        "states": {
+          "good": 95,
+          "warning": 30,
+          "critical": 15
+        },
+        
+        "format": "{icon} {capacity}%",
+        "format-good": "{icon} {capacity}%",
+        "format-charging": "<span font-family='Font Awesome 6 Pro' size='110%'>\uf376</span> {capacity}%",
+        "format-plugged": "<span font-family='Font Awesome 6 Pro' size='110%'>\uf376</span> {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-warning": "{icon} {capacity}%",
+        "format-critical": "{icon} {capacity}%",
+        "format-icons": [
+            // 1 Critical 2 Warning  3 Plugged 4 5 Format 6 Full
+            // or you can just put span and icons on the above battery states also it's the same thing
+            "<span font-family='Font Awesome 6 Pro' size='110%'>\ue0b0</span>",
+            "<span font-family='Font Awesome 6 Pro' size='110%'>\uf243</span>",
+            "<span font-family='Font Awesome 6 Pro' size='110%'>\uf376</span>",
+            "<span font-family='Font Awesome 6 Pro' size='110%'>\uf242</span>",
+            "<span font-family='Font Awesome 6 Pro' size='110%'>\uf241</span>",
+            "<span font-family='Font Awesome 6 Pro' size='110%'>\uf240</span>"
+        ],
+        "format-alt": "{time}",
+        "format-time": "{H}h {M}min",
+        "tooltip": true,
+        "tooltip-format": "{timeTo} {power}w"
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "{icon}",
+        "format-disconnected": "{icon}", 
+        "tooltip-format": "{ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-linked": "{icon} {ifname} (No IP)",
+        "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname} {icon}",
+        "tooltip-format-disconnected": "{icon} Disconnected",
+        "max-length": 50,
+        // 1 Ethernet 2 Disconnected 3 4 5 Two Bar 6 Full Bar
+        "format-icons": [
+        "<span font-family='Font Awesome 6 Pro'>\uf796</span>",
+        "<span font-family='Font Awesome 6 Pro'>\uf6ac</span>",
+        "<span font-family='Font Awesome 6 Pro'></span>",
+        "<span font-family='Font Awesome 6 Pro'></span>",
+        "<span font-family='Font Awesome 6 Pro'>\uf6ab</span>",
+        "<span font-family='Font Awesome 6 Pro'>\uf1eb</span>"    
+    ]
+    },
+    
+    "backlight": {
+        "interval": 2,
+        "align": 0,
+        "rotate": 0,
+        "format": "{icon} {percent}%",
+        "tooltip-format": "backlight {percent}%",
+        "icon-size": 10,
+        "format-icons": ["<span font-family='Font Awesome 6 Pro'>\uf185</span>"],
+        "on-click": "",
+        "on-click-middle": "",
+        "on-click-right": "",
+        "on-update": "",
+        "on-scroll-up": "~/.config/hypr/scripts/Brightness.sh --inc",
+        "on-scroll-down": "~/.config/hypr/scripts/Brightness.sh --dec",
+        "smooth-scrolling-threshold": 1,
+    },
+    "bluetooth": {
+        "format": "<span font-family='Font Awesome 6 Pro'></span>",
+        "format-disabled": "<span font-family='Font Awesome 6 Pro'>󰂳</span>",
+        "format-connected": "<span font-family='Font Awesome 6 Pro'>󰂱</span> {num_connections}",
+        "tooltip-format": "<span font-family='Font Awesome 6 Pro'></span> {device_alias}",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "<span font-family='Font Awesome 6 Pro'></span> {device_alias} <span font-family='Font Awesome 6 Pro'>󰂄</span>{device_battery_percentage}%",
+        "tooltip": true,
+        "on-click": "blueman-manager"
+    },
+    "disk#1": {
+        "interval": 30,
+        //"format": "󰋊",
+        "path": "/",
+        //"format-alt-click": "click",
+        "format": "{percentage_used}% <span font-family='Font Awesome 6 Pro'>\uf0a0</span>",
+        //"tooltip": true,
+        "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
+    },
+    "disk#2": {
+        "interval": 30,
+        //"format": "󰋊",
+        "path": "/run/media/fknemi/9a6579bf-96aa-4bcb-aee2-755f6284090f/",
+        //"format-alt-click": "click",
+        "format": "{percentage_used}% <span font-family='Font Awesome 6 Pro'>\uf0a0</span>",
+        //"tooltip": true,
+        "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
+    },
+    "hyprland/submap": {
+        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+        "tooltip": false,
+    },
+        
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 40,
+        "separate-outputs": true,
+        "offscreen-css" : true,
+        "offscreen-css-text": "(inactive)",
+         "rewrite": {
+              "(.*) — Mozilla Firefox": " $1",
+              "(.*) - fish": "> [$1]",
+          "(.*) - zsh": "> [$1]",
+          "(.*) - kitty": "> [$1]",
+        }
+    },
+    
+    "mpris": {
+        "interval": 10,
+        "format": "{player_icon} ",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "on-click-middle": "playerctl play-pause",
+        "on-click": "playerctl previous",
+        "on-click-right": "playerctl next",
+        "scroll-step": 5.0,
+        "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
+        "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+        "smooth-scrolling-threshold": 1,
+        "player-icons": {
+            "chromium": "",
+            "default": "",
+            "firefox": "",
+            "kdeconnect": "",
+            "mopidy": "",
+            "mpv": "󰐹",
+            "spotify": "",
+            "vlc": "󰕼",
+        },
+        "status-icons": {
+            "paused": "󰐎",
+            "playing": "",
+            "stopped": "",
+        },
+        // "ignored-players": ["firefox"]
+        "max-length": 30,
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "<span font-family='Font Awesome 6 Pro' size='110%'>\uf293</span> {volume}%",
+        "format-muted": "\uf6a9",
+        // 1 Volume <= 20% 2 Volume <= 45% 3 Volume <= 70% 4 Volume <= 100% 
+        "format-icons": {
+            
+            "headphone": "<span font-family='Font Awesome 6 Pro' size='110%'>\uf025</span>", // ""
+            "hands-free": "<span font-family='Font Awesome 6 Pro' size='110%'>\uf025</span>", //""
+            "headset": "\uf293",
+            "phone": "<span font-family='Font Awesome 6 Pro' size='110%'>\uf095</span>", // "",
+            "portable": "<span font-family='Font Awesome 6 Pro' size='110%'>\uf095</span>", //"",
+            "car": "<span font-family='Font Awesome 6 Pro' size='110%'>\uf1b9</span>", //"",
+        // "default": ["", "", "󰕾", ""], 
+        "default": [
+	"<span font-family='Font Awesome 6 Pro' size='110%'>\uf026</span>",
+        "<span font-family='Font Awesome 6 Pro' size='110%'>\uf027</span>",
+        "<span font-family='Font Awesome 6 Pro' size='110%'>\uf6a8</span>",
+        "<span font-family='Font Awesome 6 Pro' size='110%'>\uf028</span>"
+    ], 
+        "ignored-sinks": ["Easy Effects Sink"],
+        },
+        "scroll-step": 5.0,
+        "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
+        "on-click-right": "pavucontrol -t 3",
+        "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
+        "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+        "tooltip-format": "{icon} {desc} | {volume}%",
+        "smooth-scrolling-threshold": 1
+    },
+          
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "on-click": "~/.config/hypr/scripts/Volume.sh --toggle-mic",
+        "on-click-right": "pavucontrol -t 4",
+        "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --mic-inc",
+        "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --mic-dec",
+        "tooltip-format": "{source_desc} | {source_volume}%",
+        "scroll-step": 5,
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 8,
+    },
+          
+    "wireplumber": {
+        "format": "{icon} {volume} %",
+        "format-muted": " Mute",
+        "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
+        "on-click-right": "pavucontrol -t 3",
+        "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
+        "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+        "format-icons": ["", "", "󰕾", ""], 
+    },
+          
+    "wlr/taskbar": {
+        "format": "{icon} {name} ",
+        "icon-size": 15,
+        "all-outputs": false,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+              "wofi",
+              "rofi"
+                       ]
+    },
+            
+    "group/mid-right": {
+        "orientation": "horizontal",
+        "modules": [
+            "clock",
+            "battery"
+          ]	
+    },
+    "group/mid-left": {
+        "orientation": "horizontal",
+        "modules": [
+            "hyprland/window",
+            "pulseaudio",
+            "backlight"        
+          ]	
+    },
+    "temperature": {
+        "interval": 10,
+        "tooltip": true,
+        "hwmon-path": ["/sys/class/hwmon/hwmon1/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+        //"thermal-zone": 0,
+        "critical-threshold": 85,
+        "format-critical": "{temperatureC}°C",
+        "format": "{temperatureC}°C",
+        "on-click-right": "kitty --title nvtop sh -c 'nvtop'"
+    },
+          
+}

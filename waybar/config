@@ -1,0 +1,32 @@
+[
+    {
+    "include": "~/.config/waybar/modules",
+    "layer": "top",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+    "spacing": 8,
+    "fixed-center": true,
+    "ipc": true,
+    "margin-top": 4,
+    "margin-left": 2,
+    "margin-right": 2,
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-left": [
+           "network",
+	    "group/mid-left"
+        
+    ],
+    "modules-right": [
+        "group/mid-right",
+        "disk#1",
+        "disk#2",
+        "temperature",
+        "seperator",
+        "memory"
+        
+    ]
+}
+]
