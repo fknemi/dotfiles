@@ -45,50 +45,62 @@ end
 
 
 
-luasnip.setup({
-    region_check_events = "CursorHold,InsertLeave",
-    -- those are for removing deleted snippets, also a common problem
-    delete_check_events = "TextChanged,InsertEnter",
-})
-
-
-
-
 require("lspconfig").intelephense.setup({
 	on_attach = on_attach,
-	flags = lsp_flags,
+	--flags  = lsp_flags,
 })
 require("lspconfig").pyright.setup({
 	on_attach = on_attach,
-	flags = lsp_flags,
+	--flags = lsp_flags,
+	
 })
 require("lspconfig").ast_grep.setup({
 	on_attach = on_attach,
-	flags = lsp_flags,
+	--flags = lsp_flags,
 })
 require("lspconfig").svelte.setup({
 	on_attach = on_attach,
-	flags = lsp_flags,
+	--flags = lsp_flags,
 })
 
 require("lspconfig").clangd.setup({
 	on_attach = on_attach,
-	flags = lsp_flags,
+	--flags = lsp_flags,
 })
 
 require("lspconfig").harper_ls.setup({
 	on_attach = on_attach,
-	flags = lsp_flags,
+	--flags = lsp_flags,
 })
 
 require("lspconfig").lua_ls.setup({
 	on_attach = on_attach,
-	flags = lsp_flags,
+	--flags = lsp_flags,
 })
 
 
+require("lspconfig").tsserver.setup({
+	on_attach = on_attach,
 
+})
 
+local prettier = require("prettier")
 
-
+prettier.setup({
+  bin = 'prettier', -- or `'prettierd'` (v0.23.3+)
+  filetypes = {
+    "css",
+    "graphql",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "less",
+    "markdown",
+    "scss",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+  },
+})
 

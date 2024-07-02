@@ -11,6 +11,7 @@ vim.keymap.set("n", "<leader>mm", vim.cmd.MCstart, {noremap = true, silent = tru
 vim.keymap.set("n", "<leader>tk", vim.cmd.NvimTreeFocus, {noremap = true, silent = true})
 vim.keymap.set("n", "<leader>tp", require'telescope'.extensions.projects.projects, {noremap = true, silent = true})
 vim.keymap.set("n", "<leader>ww", require'workspaces'.open, {noremap = true, silent = true})
+vim.keymap.set("n", "<C-z>", vim.cmd.undo, {noremap = true, silent = true})
 -- vim.keymap.set("n", "<leader>wll", require'workspaces'.list, {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>wll', ':WorkspacesList<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>sx', ':w!<CR>', {noremap = true, silent = true})

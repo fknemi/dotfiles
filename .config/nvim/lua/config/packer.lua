@@ -80,11 +80,9 @@ return require("packer").startup(function(use)
 
 	use("neovim/nvim-lspconfig")
 	use("jose-elias-alvarez/null-ls.nvim")
-	use("MunifTanjim/prettier.nvim")
 	use("m4xshen/autoclose.nvim")
 	use("natecraddock/workspaces.nvim")
 	use("rebelot/kanagawa.nvim")
-	use("hrsh7th/nvim-cmp")
 	
 	use({
 	"L3MON4D3/LuaSnip",
@@ -93,5 +91,32 @@ return require("packer").startup(function(use)
 	-- install jsregexp (optional!:).
 	run = "make install_jsregexp"
 })
+
+
+
+
+
+
+use {
+	"hrsh7th/nvim-cmp",
+	requires = {
+	  "L3MON4D3/LuaSnip",
+	  "saadparwaiz1/cmp_luasnip",
+	  "mlaursen/vim-react-snippets",
+	},
+	config = function()
+	  vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
+	  require("vim-react-snippets").lazy_load()
+	  local cmp = require("cmp")
+	  local luasnip = require("luasnip")
+	  local compare = cmp.config.compare
+	  -- Further configuration if needed
+	end,
+  }
+  
+
+use('MunifTanjim/prettier.nvim')
+
+
 
 end)
