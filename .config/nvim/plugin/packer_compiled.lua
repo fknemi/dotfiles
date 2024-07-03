@@ -155,7 +155,7 @@ _G.packer_plugins = {
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
-    config = { "\27LJ\2\nÕ\1\0\0\5\0\f\0\0216\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\3\0005\4\4\0B\0\4\0016\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\0016\0\5\0'\2\b\0B\0\2\0026\1\5\0'\3\t\0B\1\2\0029\2\n\0009\2\v\2K\0\1\0\fcompare\vconfig\fluasnip\bcmp\14lazy_load\23vim-react-snippets\frequire\1\0\2\tlink\fComment\fdefault\2\17CmpGhostText\16nvim_set_hl\bapi\bvim\0" },
+    config = { "\27LJ\2\nÕ\1\0\0\5\0\f\0\0216\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\3\0005\4\4\0B\0\4\0016\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\0016\0\5\0'\2\b\0B\0\2\0026\1\5\0'\3\t\0B\1\2\0029\2\n\0009\2\v\2K\0\1\0\fcompare\vconfig\fluasnip\bcmp\14lazy_load\23vim-react-snippets\frequire\1\0\2\fdefault\2\tlink\fComment\17CmpGhostText\16nvim_set_hl\bapi\bvim\0" },
     loaded = true,
     path = "/home/fknemi/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
@@ -179,6 +179,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fknemi/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["oil.nvim"] = {
+    config = { "\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0" },
+    loaded = true,
+    path = "/home/fknemi/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    url = "https://github.com/stevearc/oil.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -239,18 +245,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17project_nvim\frequire\0", "config", "project.nvim")
-time([[Config for project.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
-try_loadstring("\27LJ\2\nÕ\1\0\0\5\0\f\0\0216\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\3\0005\4\4\0B\0\4\0016\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\0016\0\5\0'\2\b\0B\0\2\0026\1\5\0'\3\t\0B\1\2\0029\2\n\0009\2\v\2K\0\1\0\fcompare\vconfig\fluasnip\bcmp\14lazy_load\23vim-react-snippets\frequire\1\0\2\tlink\fComment\fdefault\2\17CmpGhostText\16nvim_set_hl\bapi\bvim\0", "config", "nvim-cmp")
+try_loadstring("\27LJ\2\nÕ\1\0\0\5\0\f\0\0216\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\3\0005\4\4\0B\0\4\0016\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\0016\0\5\0'\2\b\0B\0\2\0026\1\5\0'\3\t\0B\1\2\0029\2\n\0009\2\v\2K\0\1\0\fcompare\vconfig\fluasnip\bcmp\14lazy_load\23vim-react-snippets\frequire\1\0\2\fdefault\2\tlink\fComment\17CmpGhostText\16nvim_set_hl\bapi\bvim\0", "config", "nvim-cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: oil.nvim
+time([[Config for oil.nvim]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0", "config", "oil.nvim")
+time([[Config for oil.nvim]], false)
 -- Config for: conform.nvim
 time([[Config for conform.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0", "config", "conform.nvim")
 time([[Config for conform.nvim]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17project_nvim\frequire\0", "config", "project.nvim")
+time([[Config for project.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

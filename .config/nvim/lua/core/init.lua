@@ -20,5 +20,7 @@ require("core.plugin.workspaces")
 require("core.plugin.cmp")
 require("core.plugin.snippets")
 require("core.plugin.luasnip")
+require("core.plugin.oil")
+
 
 

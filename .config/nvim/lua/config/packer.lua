@@ -117,6 +117,12 @@ use {
 
 use('MunifTanjim/prettier.nvim')
 
+  use({
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup()
+    end,
+  })
 
 
 end)
