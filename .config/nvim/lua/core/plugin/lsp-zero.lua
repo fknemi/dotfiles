@@ -3,7 +3,7 @@ local cmp = require("cmp_nvim_lsp")
 local luasnip = require("luasnip")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp.default_capabilities(capabilities)
-
+require("lspconfig.configs")
 local on_attach = function(_, bufnr)
 	local nmap = function(keys, func, desc)
 		if desc then
@@ -84,6 +84,34 @@ require("lspconfig").tsserver.setup({
 
 })
 
+require("lspconfig").rust_analyzer.setup({
+	on_attach = on_attach,
+
+})
+
+require("lspconfig").cssls.setup({
+	on_attach = on_attach,
+
+})
+
+require("lspconfig").volar.setup({
+	on_attach = on_attach,
+
+})
+
+
+require("lspconfig").angularls.setup({
+	on_attach = on_attach,
+
+})
+
+require("lspconfig").jdtls.setup({
+	on_attach = on_attach,
+
+})
+
+
+
 local prettier = require("prettier")
 
 prettier.setup({
@@ -101,6 +129,26 @@ prettier.setup({
     "typescript",
     "typescriptreact",
     "yaml",
+  },
+  cli_options = {
+    arrow_parens = "always",
+    bracket_spacing = true,
+    bracket_same_line = false,
+    embedded_language_formatting = "auto",
+    end_of_line = "lf",
+    html_whitespace_sensitivity = "css",
+    -- jsx_bracket_same_line = false,
+    jsx_single_quote = false,
+    print_width = 80,
+    prose_wrap = "preserve",
+    quote_props = "as-needed",
+    semi = true,
+    single_attribute_per_line = false,
+    single_quote = false,
+    tab_width = 4,
+    trailing_comma = "es5",
+    use_tabs = false,
+    vue_indent_script_and_style = false,
   },
 })
 
