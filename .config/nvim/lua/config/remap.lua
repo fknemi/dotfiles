@@ -11,14 +11,14 @@ vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
-
+vim.opt.complete = ""
 
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Oil)
 vim.keymap.set("n", "<leader>mm", vim.cmd.MCstart, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tf", vim.cmd.NvimTreeFocus, { noremap = true, silent = true })
 --vim.keymap.set("n", "<leader>tp", require 'telescope'.extensions.projects.projects, { noremap = true, silent = true })
--- vim.keymap.set("n", "<leader>ww", require 'workspaces'.open, { noremap = true, silent = true })
+--vim.keymap.set("n", "<leader>ww", require 'workspaces'.open, { noremap = true, silent = true })
 vim.keymap.set("n", "<C-z>", vim.cmd.undo, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tk", vim.cmd.NvimTreeToggle, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>ff", ':Format', { noremap = true, silent = true })
@@ -26,9 +26,9 @@ vim.keymap.set("n", "<C-v>v", ':vsplit<CR>', { noremap = true, silent = true })
 vim.keymap.set("n", "<C-v>+", ':vertical resize +10<CR>', { noremap = true, silent = true })
 vim.keymap.set("n", "<C-v>-", ':vertical resize -10<CR>', { noremap = true, silent = true })
 vim.keymap.set("n", "<C-v>b", ':split<CR>', { noremap = true, silent = true })
--- vim.keymap.set("n", "<leader>wll", require'workspaces'.list, {noremap = true, silent = true})
+--vim.keymap.set("n", "<leader>wll", require'workspaces'.list, {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>wll', ':WorkspacesList<CR>', { noremap = true, silent = true })
---vim.api.nvim_set_keymap('n', '<leader>o', ':lua require("harpoon.ui").nav_next()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>o', ':lua require("harpoon.ui").nav_next()<CR>', { noremap = true, silent = true })
 
 
 vim.api.nvim_set_keymap('n', ',',"w :lua require('nvim-window').pick()<CR>", { noremap = true, silent = true })
@@ -61,3 +61,5 @@ vim.keymap.set("t", "<Esc>", vim.cmd.stopinsert, {noremap = true, silent = true}
 vim.keymap.set("n", "<leader>tf", ':ToggleTerm direction=float<CR>', {noremap = true, silent = true})
 vim.keymap.set("n", "<leader>tv", ':ToggleTerm direction=vertical<CR>', {noremap = true, silent = true})
 vim.keymap.set("n", "<leader>v", vim.cmd.noh, {noremap = true, silent = true})
+
+
